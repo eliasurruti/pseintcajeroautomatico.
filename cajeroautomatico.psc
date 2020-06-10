@@ -28,7 +28,7 @@ Proceso cajeroautomatico
 	Escribir "";
 	Escribir "Pulse cualquier tecla para ingresar";
 Esperar Tecla;
-	
+	Limpiar Pantalla;
 	
 	
 	
@@ -39,10 +39,10 @@ Esperar Tecla;
 		Escribir "";
 		Escribir "1 - Consulta tu saldo";
 		escribir "2 - Retirá dinero";
-		Escribir "3 - Salir";
-		
+		Escribir "3 - Transferencia";
+		Escribir "4 - Salir";
 		leer op;
-		si op = "1" o op ="2" o op = "3" Entonces
+		si op = "1" o op ="2" o op = "3" o op = "4" Entonces
 			Limpiar Pantalla;	
 			
 			Segun ConvertirANumero(op) Hacer
@@ -89,9 +89,25 @@ Esperar Tecla;
 					Escribir "Pulse cualquier tecla para volver al menu";
 					
 					
+				3:	Limpiar Pantalla;
+					Escribir "";
+					Escribir "Transferencia";
+					Escribir "";
+					Escribir "Tiene $", saldo, " disponible";
+					Escribir "Ingrese monto a transferir";
+					leer opc;
 					
+					si opc <= saldo y opc > 0 Entonces
+						Escribir "$",opc," Transferido";
+						saldo <- saldo - opc;
+						Escribir "";
 					
-				3: Limpiar Pantalla;;
+					sino 
+						Escribir "Monto no valido";
+					FinSi
+					Escribir "Pulse cualquier tecla para volver al menu";
+					
+				4: Limpiar Pantalla;;
 					salir <- Verdadero;
 					Escribir "Pulse 2 veces cualquier tecla para salir";
 					
