@@ -13,11 +13,11 @@ Proceso cajeroautomatico
 	Dimension inicio[6];
 	
 	inicio[0] <-  " ____               _   _     _____      ____  ";
-	inicio[1] <-  "I  _ \      /\     I \ I I   / ____I    / __ \ ";
-	inicio[2] <-  "I I_) I    /  \    I  \I I  I  I       I I  I I";
-	inicio[3] <-  "I  _ <    / /\ \   I . ` I  I  I       I I  I I";
-	inicio[4] <-  "I I_) I  / ____ \  I I\  I  I  I____   I I__I I";
-	inicio[5] <-  "I____/  /_/    \_\ I_I \_I   \_____I    \____/ ";
+	inicio[1] <-  "|  _ \      /\     | \ | |   / ____|    / __ \ ";
+	inicio[2] <-  "| |_) |    /  \    |  \| |  |  |       | |  | |";
+	inicio[3] <-  "|  _ <    / /\ \   | . ` |  |  |       | |  | |";
+	inicio[4] <-  "| |_) |  / ____ \  | |\  |  |  |____   | |__| |";
+	inicio[5] <-  "|____/  /_/    \_\ |_| \_|   \_____|    \____/ ";
 	
 	Esperar 400 Milisegundos;
 	para i <- 0 hasta 5 con paso 1 hacer
